@@ -1,9 +1,98 @@
 {% extends 'core/base.html' %}
 
 {% block title %}Portada{% endblock %}
+{% load static %}
+{% block headers %}
+<header class="masthead">
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <h1>Percy Bellido</h1>
+                <span class="subheading">Ingeniero Quimico</span>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+
+
+</header>
+
+
+{% endblock %}
+<!--Slider-->
 {% block content %}
-<h2>Portada</h2>
+<div class="row slider">
+    <div class="col">
+        <div class="carousel slide" data-bs-ride="carousel" id="slider">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid d-block w-100" src="{% static 'core/img-blog/criogenia1.jpg' %}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'core/img-blog/laboratorio1.jpg' %}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'core/img-blog/smog1.jpg' %}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'core/img-blog/reactores-phosporic1.jpeg' %}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'core/img-blog/eggs1.jpeg' %}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'core/img-blog/developer1.jpg' %}" alt="">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
 
-<p>Esto es la portada</p>
+                <div class="carousel-indicators">
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slideshow1"
+                    ></button>
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="1"
+                        aria-label="Slideshow2"
+                    ></button>
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="2"
+                        aria-label="Slideshow3"
+                    ></button>
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="3"
+                        aria-label="Slideshow4"
+                    ></button>
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="4"
+                        aria-label="Slideshow5"
+                    ></button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
