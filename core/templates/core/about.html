@@ -1,7 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block title %}About{% endblock %}
-{% block content %}
-<h2>About-me</h2>
-<p>Esto es acerca de nosotros</p>
+
+{% block background %}{% load static %}{% static 'core/img-blog/about.jpg' %}{% endblock %}
+
+{% block headers %}
+
+<h1>Percy Bellido</h1>
+<span class="subheading">Ingeniero Quimico</span>
+
 {% endblock %}
+{% block content %} {% endblock %}
